@@ -1,0 +1,8 @@
+body { background: #328aef; color: #4bf359; }
+.navbar { background: #111827; }
+.card { background: #47d4e1; border: 1px solid #eef139; }
+.form-control, .form-select { background: #0b1220; color: #5aeb46; border: 1px solid #243244; }
+.btn-primary { background: #2563eb; border-color: #2563eb; }
+.btn-success { background: #22c55e; border-color: #22c55e; }
+a { color: #16f51e; }
+.chart-card { min-height: 420px; }

@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+  <div class="col-lg-10 mx-auto">
+    <div class="card p-4 shadow">
+      <h3 class="mb-3">Your Profile</h3>
+      <form method="post" action="{{ url_for('predict') }}">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label class="form-label">Gender</label>
+            <select class="form-select" name="gender" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Weekly Self Study Hours</label>
+            <input class="form-control" name="weekly_self_study_hours" type="number" min="0" max="80" required>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Absence Days</label>
+            <input class="form-control" name="absence_days" type="number" min="0" max="60" required>
+          </div>
+          <div class="col-md-3"><label class="form-label">Math</label><input class="form-control" name="math_score" type="number" min="0" max="100" required></div>
+          <div class="col-md-3"><label class="form-label">Physics</label><input class="form-control" name="physics_score" type="number" min="0" max="100" required></div>
+          <div class="col-md-3"><label class="form-label">Chemistry</label><input class="form-control" name="chemistry_score" type="number" min="0" max="100" required></div>
+          <div class="col-md-3"><label class="form-label">Biology</label><input class="form-control" name="biology_score" type="number" min="0" max="100" required></div>
+          <div class="col-md-3"><label class="form-label">English</label><input class="form-control" name="english_score" type="number" min="0" max="100" required></div>
+          <div class="col-md-3"><label class="form-label">History</label><input class="form-control" name="history_score" type="number" min="0" max="100" required></div>
+          <div class="col-md-3"><label class="form-label">Geography</label><input class="form-control" name="geography_score" type="number" min="0" max="100" required></div>
+          <div class="col-md-6">
+            <label class="form-label">Favorite Subjects</label>
+            <input class="form-control" name="favorite_subjects" placeholder="e.g., Computer Science">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Hobbies</label>
+            <input class="form-control" name="hobbies" placeholder="e.g., Coding, Music">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Preferred Work Style</label>
+            <select class="form-select" name="preferred_work_style">
+              <option>Teamwork</option><option>Individual</option><option>Leadership</option><option>Research-oriented</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Personality Type</label>
+            <select class="form-select" name="personality_type">
+              <option>Introvert</option><option>Extrovert</option><option>Ambivert</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Risk Taking Level</label>
+            <select class="form-select" name="risk_taking_level">
+              <option>Low</option><option>Medium</option><option>High</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Technical Skills</label>
+            <input class="form-control" name="technical_skills" placeholder="e.g., Python, ML, Web Dev">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Soft Skills</label>
+            <input class="form-control" name="soft_skills" placeholder="e.g., Communication, Leadership">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Preferred Industry</label>
+            <select class="form-select" name="preferred_industry">
+              <option>IT</option><option>Healthcare</option><option>Education</option><option>Finance</option><option>Arts</option><option>Engineering</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Salary Expectation</label>
+            <select class="form-select" name="salary_expectation">
+              <option>30k-50k</option><option>50k-80k</option><option>80k-120k</option><option>120k+</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Location Preference</label>
+            <select class="form-select" name="location_preference">
+              <option>Urban</option><option>Semi-Urban</option><option>Rural</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Willing To Relocate?</label>
+            <select class="form-select" name="willingness_to_relocate">
+              <option>Yes</option><option>No</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Extracurricular Activities</label>
+            <select class="form-select" name="extracurricular_activities">
+              <option>True</option><option>False</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Part-time Job</label>
+            <select class="form-select" name="part_time_job">
+              <option>True</option><option>False</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn btn-primary mt-4">Get Recommendations</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
