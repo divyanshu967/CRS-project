@@ -11,7 +11,6 @@
 ## Quickstart (Local)
 1) Create a virtual env and install deps:
 ```
-pip install -r requirements.txt
 ```
 2) Train the model (uses the uploaded CSV by default path):
 ```
